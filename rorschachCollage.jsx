@@ -2,21 +2,21 @@
 app.preferences.rulerUnits = Units.PIXELS; 
 
 //File Locations
-var centerpieceFolder = Folder("F:/DiceGit/center");
-var sideFolder = Folder("F:/Dicegit/side");
-var verticalFolder = Folder("F:/DiceGit/vertical");
-var mainFlowerFolder = Folder("F:/DiceGit/flowerMain");
-var subFlowerFolder = Folder("F:/DiceGit/flowerSub");
+var centerpieceFolder = Folder("{{replace}}/center");
+var sideFolder = Folder("{{replace}}/side");
+var verticalFolder = Folder("{{replace}}/vertical");
+var mainFlowerFolder = Folder("{{replace}}/flowerMain");
+var subFlowerFolder = Folder("{{replace}}/flowerSub");
 
 //Read files
 var centerFileList = centerpieceFolder.getFiles();
 var sideFileList = sideFolder.getFiles();
 var verticalFileList = verticalFolder.getFiles();
 var mainFlowerFileList = mainFlowerFolder.getFiles();
-var subFlowerFileList = subFlowerFolder.getFiles();
+var subFlowerFileList = subFlowerFolder.getFiles()
 
 //Queuing order for images slected
-var fileOrder = File("F:/DiceGit/demoQueues/miniTest.txt");
+var fileOrder = File("{{replace}}/demoQueues/allPermutations.txt");
 fileOrder.open('e');
 var arr = fileOrder.read();
 var fileQueue  = eval(arr);
@@ -207,7 +207,7 @@ var displacementFill = function(fileName, action, actionFolder) {
     fillWhite.hsb.brightness = 100;
     app.activeDocument.selection.fill(fillWhite);
     doAction(action, actionFolder);
-    PSFile = new File("F:/DiceGit/displacementMaps/" + fileName);
+    PSFile = new File("{{replace}}/displacementMaps/" + fileName);
     PSSaveOptions = new PhotoshopSaveOptions();
     app.activeDocument.saveAs(PSFile, PSSaveOptions, false, Extension.LOWERCASE);
     app.activeDocument.close(SaveOptions.DONOTSAVECHANGES);
@@ -252,7 +252,7 @@ switchOut("Centerpiece");
 myLayer = activeDocument.artLayers[0];
 myLayer.duplicate(myLayer, ElementPlacement.PLACEAFTER);
 myLayer.duplicate(myLayer, ElementPlacement.PLACEAFTER);
-var displaceFile = new File("F:/DiceGit/displacementMaps/DisplacementLace.psd");
+var displaceFile = new File("{{replace}}/displacementMaps/DisplacementLace.psd");
 //NOTE: Change to 4X for large scale
 app.activeDocument.artLayers[1].applyDisplace(250, 250, DisplacementMapType.STRETCHTOFIT, UndefinedAreas.REPEATEDGEPIXELS, displaceFile);
 app.activeDocument.artLayers[1].adjustLevels(0,255, .5, 0, 155);
@@ -314,7 +314,7 @@ switchOut("TopMini 1");
 myLayer = activeDocument.artLayers[0];
 myLayer.duplicate();
 app.activeDocument.activeLayer = app.activeDocument.artLayers[1];
-var displaceFile = new File("F:/DiceGit/displacementMaps/DisplacementCircularSm.psd");
+var displaceFile = new File("{{replace}}/displacementMaps/DisplacementCircularSm.psd");
 doAction('Flip','Selection');
 app.activeDocument.artLayers[1].applyDisplace(60, 240, DisplacementMapType.STRETCHTOFIT, UndefinedAreas.REPEATEDGEPIXELS, displaceFile);
 app.activeDocument.artLayers[1].applyDisplace(60, 240, DisplacementMapType.STRETCHTOFIT, UndefinedAreas.REPEATEDGEPIXELS, displaceFile);
@@ -368,7 +368,7 @@ switchOut("TopMini 3");
 myLayer = activeDocument.artLayers[0];
 myLayer.duplicate();
 app.activeDocument.activeLayer = app.activeDocument.artLayers[1];
-var displaceFile = new File("F:/DiceGit/displacementMaps/DisplacementCircularSm.psd");
+var displaceFile = new File("{{replace}}/displacementMaps/DisplacementCircularSm.psd");
 doAction('Flip','Selection');
 app.activeDocument.artLayers[1].applyDisplace(60, 60, DisplacementMapType.STRETCHTOFIT, UndefinedAreas.REPEATEDGEPIXELS, displaceFile);
 app.activeDocument.artLayers[1].applyDisplace(60, 60, DisplacementMapType.STRETCHTOFIT, UndefinedAreas.REPEATEDGEPIXELS, displaceFile);
@@ -439,7 +439,7 @@ switchOut("BottomQuad");
 myLayer = activeDocument.artLayers[0];
 myLayer.duplicate();
 app.activeDocument.activeLayer = app.activeDocument.artLayers[0];
-var displaceFile = new File("F:/DiceGit/displacementMaps/DisplacementTriangle.psd");
+var displaceFile = new File("{{replace}}/displacementMaps/DisplacementTriangle.psd");
 app.activeDocument.artLayers[0].applyDisplace(100, 100, DisplacementMapType.STRETCHTOFIT, UndefinedAreas.REPEATEDGEPIXELS, displaceFile);
 doAction('Select','Selection');
 app.activeDocument.selection.rotate(90, AnchorPosition.MIDDLECENTER);
@@ -477,7 +477,7 @@ switchOut("BottomMini 1");
 myLayer = activeDocument.artLayers[0];
 myLayer.duplicate();
 app.activeDocument.activeLayer = app.activeDocument.artLayers[1];
-var displaceFile = new File("F:/DiceGit/displacementMaps/DisplacementCircularSM.psd");
+var displaceFile = new File("{{replace}}/displacementMaps/DisplacementCircularSM.psd");
 app.activeDocument.artLayers[1].applyDisplace(120, 120, DisplacementMapType.STRETCHTOFIT, UndefinedAreas.REPEATEDGEPIXELS, displaceFile);
 doAction('Flip','Selection');
 doAction('Desaturate','Color');
@@ -620,13 +620,13 @@ doAction('All','Selection');
 app.activeDocument.activeLayer.translate(0, -fH + (docHeight / 9));
 
 //File Save
-psdFile = new File("F:/DiceImages/Fulls/Day9/" +String(addZero(s1)) + String(addZero(s2)) + String(addZero(s3)) + String(addZero(s4)) + String(addZero(s5)));
+psdFile = new File("{{replace}}/output/" +String(addZero(s1)) + String(addZero(s2)) + String(addZero(s3)) + String(addZero(s4)) + String(addZero(s5)));
 psdSaveOptions = new PhotoshopSaveOptions();
 psdSaveOptions.alphaChannels = true;
 psdSaveOptions.embedColorProfile = true;
 psdSaveOptions.layers = true;
 app.activeDocument.saveAs(psdFile, psdSaveOptions, true, Extension.LOWERCASE);
-jpgFile = new File("F:/DiceImages/Fulls/Day9/" +String(addZero(s1)) + String(addZero(s2)) + String(addZero(s3)) + String(addZero(s4)) + String(addZero(s5)));
+jpgFile = new File("{{replace}}/output/" +String(addZero(s1)) + String(addZero(s2)) + String(addZero(s3)) + String(addZero(s4)) + String(addZero(s5)));
 jpgSaveOptions = new JPEGSaveOptions();
 jpgSaveOptions.embedColorProfile = true;
 jpgSaveOptions.formatOptions = FormatOptions.STANDARDBASELINE;
@@ -634,6 +634,5 @@ jpgSaveOptions.matte = MatteType.NONE;
 jpgSaveOptions.quality = 12;
 app.activeDocument.saveAs(jpgFile, jpgSaveOptions, true, Extension.LOWERCASE);
 app.activeDocument.close(SaveOptions.DONOTSAVECHANGES);
-
 }
 
