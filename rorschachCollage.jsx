@@ -16,7 +16,7 @@ var mainFlowerFileList = mainFlowerFolder.getFiles();
 var subFlowerFileList = subFlowerFolder.getFiles()
 
 //Queuing order for images slected
-var fileOrder = File("{{replace}}/demoQueues/allPermutations.txt");
+var fileOrder = File("{{replace}}/demoQueues/miniTest.txt");
 fileOrder.open('e');
 var arr = fileOrder.read();
 var fileQueue  = eval(arr);
