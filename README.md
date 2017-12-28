@@ -22,7 +22,7 @@ If you don't like reading. Check out this tutorial video:
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=EXKCHgv0H80
 " target="_blank"><img src="http://img.youtube.com/vi/EXKCHgv0H80/0.jpg" 
-alt="rorschachcollage Tutorial Video" width="240" height="180" border="10" /></a>
+alt="rorschachcollage Tutorial Video" width="480" height="360" border="10" /></a>
 
 1. Launch Photoshop
 2. Load the script from File>Scripts>Browse.. or open the collageMaker.jsx file, select Photoshop from the application dropdown menu, and then hit the play button to run the script.
