@@ -25,7 +25,11 @@ If you don't like reading. Check out this tutorial video:
 alt="rorschachcollage Tutorial Video" width="480" height="360" border="10" /></a>
 
 1. Launch Photoshop
-2. Load the script from File>Scripts>Browse.. or open the collageMaker.jsx file, select Photoshop from the application dropdown menu, and then hit the play button to run the script.
-3. Let Photoshop do its business. The quantity and size of the files determines the time it will take to complete.
+2. Go to the project folder and open rorschachCollage.jsx
+3. Replace all the {{replace}}'s in the file with the file path of the project
+    On Windows you will have to flip the /'s to \ in the file path.
+4. Select the file with the sets of arrays you want to use and put its file path into the fileOrder variable
+5. If you want to change the images the script will use, make sure you use a two-digit sequential numbering system starting with 00.
+6. Press play, and let Photoshop do its business. The quantity and size of the files determines the time it will take to complete.
 4. Presto! Your design is fully baked and ready to go. 
 ..* Send me your design at mikepehelgithub@gmail.com. I really want to see what you're able to make with the script.
