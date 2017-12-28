@@ -12,12 +12,17 @@ Since this is a Photoshop script, you might want to download [Adobe ExtendScript
 
 ## Prerequisites
 
-* Make sure you have enough space for the images. They will take up a little more than 11 GB
-* Move the Actions to your actions folder for Photoshop. They will have to be named correctly or changed accordingly in the script
+* Make sure all the Actions and Patterns have been loaded into Photoshop or moved to the corresponding folder. They will have to be named correctly or changed accordingly in the script
 * Photoshop CC (Any year)
 * A sample list has been included which illustrates how to format the file queue for each composition. You will have to create your own list or use a random number to select which image files is chosen to fully utilize the script.
 
 ## Creating your First Collage
+
+If you don't like reading. Check out this tutorial video:
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=EXKCHgv0H80
+" target="_blank"><img src="http://img.youtube.com/vi/EXKCHgv0H80/0.jpg" 
+alt="rorschachcollage Tutorial Video" width="240" height="180" border="10" /></a>
 
 1. Launch Photoshop
 2. Load the script from File>Scripts>Browse.. or open the collageMaker.jsx file, select Photoshop from the application dropdown menu, and then hit the play button to run the script.
