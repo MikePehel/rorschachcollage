@@ -18,7 +18,7 @@ Since this is a Photoshop script, you might want to download [Adobe ExtendScript
 
 ## Creating your First Collage
 
-If you don't like reading. Check out this tutorial video:
+If you don't like reading, check out this tutorial video:
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=EXKCHgv0H80
 " target="_blank"><img src="http://img.youtube.com/vi/EXKCHgv0H80/0.jpg" 
